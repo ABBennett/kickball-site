@@ -16,7 +16,7 @@
       <% @teams_hash.each do |team_name, players| %>
         <% players.each do |position, name| %>
         <% if position == @position_name %>
-        <li><%= name%></li>
+        <li><%= name + ", " + team_name %></li>
         <% end %>
         <% end %>
         <% end %>

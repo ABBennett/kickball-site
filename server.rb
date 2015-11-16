@@ -12,7 +12,6 @@ end
 get '/teams/:team_name' do
   @teams_hash = roster_hash
   @team_name = params[:team_name]
-  # binding.pry
   erb :show
 end
 

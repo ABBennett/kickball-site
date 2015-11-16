@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <ul>
+      <% @teams_hash.each do |team_name, players| %>
+        <li><a href="/teams/<%= team_name %>"><%= team_name %></a></li>
+      <% end %>
+    </ul>
+
+  </body>
+</html>

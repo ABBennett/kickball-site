@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Basic HTML Page</title>
+    <link rel="stylesheet" href="/home.css">
+  </head>
+
+  <body>
+    <h1>
+      <%= @team_name %>
+    </h1>
+
+    <ul>
+      <% @teams_hash.each do |team_name, players| %>
+      <% if team_name == @team_name %>
+        <% players.each do |position, name| %>
+        <li><%=  position + ": " + name%></li>
+        <% end %>
+        <% end %>
+        <% end %>
+    </ul>
+
+    <h5><a href='/teams'>Team list</a></h5>
+
+
+  </body>
+</html>

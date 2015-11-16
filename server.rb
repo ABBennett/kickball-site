@@ -15,3 +15,14 @@ get '/teams/:team_name' do
   # binding.pry
   erb :show
 end
+
+get '/positions' do
+  @teams_hash = roster_hash
+  erb :index_positions
+end
+
+get '/positions/:position_name' do
+  @teams_hash = roster_hash
+  @position_name = params[:position_name]
+  erb :show_position
+end

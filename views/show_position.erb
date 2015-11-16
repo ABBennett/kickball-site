@@ -9,17 +9,25 @@
 
   <body>
     <h1>
-      Teams
+      <%= @position_name %>
     </h1>
+
     <ul>
       <% @teams_hash.each do |team_name, players| %>
-        <li><a href="/teams/<%= team_name %>"><%= team_name %></a></li>
-      <% end %>
+        <% players.each do |position, name| %>
+        <% if position == @position_name %>
+        <li><%= name%></li>
+        <% end %>
+        <% end %>
+        <% end %>
     </ul>
 
     <h5>
+      <a href='/teams'>Team list</a>
       <a href='/positions'>All positions</a>
     </h5>
+
+
 
   </body>
 </html>
